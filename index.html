@@ -7,15 +7,13 @@
     <link rel="icon" href="asset/favicon.ico">
 
     <title>轉盤</title>
-    <meta name="description" content="">
-    <meta name="og:description" content="" />
+    <meta name="description" content="🆘 台北車站中午餐吃什麼，轉盤抽起來">
     <meta property="og:locale" content="zh_TW" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:site_name" content="" />
-    <meta property="og:description" content="" />
-    <meta property="og:image" content="" />
+    <meta property="og:title" content="What's your lunch?" />
+    <meta property="og:url" content="https://hsuanchi.github.io/Whats-your-lunch/" />
+    <meta property="og:description" content="🆘 台北車站中午餐吃什麼，轉盤抽起來" />
+    <meta property="og:image" content="asset/favicon.ico" />
 
     <link href="dist/styles/main.css?19112602" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
@@ -23,7 +21,6 @@
     <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
     <link type="text/css" rel="stylesheet"
         href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-flat.css" />
-    <script src="/src/scripts/vue.min.js"></script>
     <style>
         .googleMap {
             text-align: center;
@@ -41,12 +38,6 @@
                     <span class="visible-xs-inline">北車中午吃什麼</span>
                 </a>
             </div>
-            <!-- <div class="collapse navbar-collapse" id="navbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#" data-toggle="modal" data-target="#set-modal" data-step="4"
-                            data-intro='點此可以自行設定轉盤內容、選項、機率！' v-show="goFlag == false">設定轉盤</a></li>
-                </ul>
-            </div> -->
         </div>
     </nav>
 
@@ -59,34 +50,6 @@
                     class="fa fa-long-arrow-up"></i></div>
             <div class="piechart" id="piechart" data-step="2" data-intro='這是目前的轉盤，每個選項佔的面積就是機率。' v-on="click:go"></div>
         </div>
-
-
-        <!-- <div class="tab-content">
-            <div class="tab-pane active" id="logs">
-                <div class="table-responsive">
-                    <table class="table table-hover table-striped text-center"
-                        v-if="targetUntil.action != 'run' && turnFlag <= 0">
-                        <thead>
-                            <tr>
-                                <th>輪盤結果</th>
-                                <th>選擇</th>
-                                <th>Google Map</th>
-                            </tr>
-                        </thead>
-                        <tbody v-repeat="logs">
-                            <tr>
-                                <td><span v-text="logs.length - $index"></span></td>
-                                <td v-text="content"></td>
-                                <td>
-                                    <a href="{{shop_url}}" target="_blank">URL</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div> -->
         <div class="container">
             <div class="googleMap">
                 <div v-repeat="logs">
@@ -95,12 +58,7 @@
                 </div>
             </div>
         </div>
-
-
-
-        <!-- <pre>{{ $data|json }}</pre> -->
-
-
+        <script src="/src/scripts/vue.min.js"></script>
         <script type="text/javascript" src="dist/scripts/main.js?20210128"></script>
         <script src="https://www.gstatic.com/charts/loader.js"></script>
         <script>
